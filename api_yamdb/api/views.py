@@ -10,27 +10,17 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from .filters import TitleFilter
-from .permissions import (
-    AuthorModeratorOrReadOnly,
-    IsAdminOnly,
-    IsAdminOrReadOnly,
-)
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    NoChangeRoleSerializer,
-    ObtainTokenSerializer,
-    ReadTitleSerializer,
-    ReviewSerializer,
-    SignUpSerializer,
-    UsersSerializer,
-    WriteTitleSerializer,
-)
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
+from .filters import TitleFilter
+from .permissions import (AuthorModeratorOrReadOnly, IsAdminOnly,
+                          IsAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, NoChangeRoleSerializer,
+                          ObtainTokenSerializer, ReadTitleSerializer,
+                          ReviewSerializer, SignUpSerializer, UsersSerializer,
+                          WriteTitleSerializer)
 
 
 class CreateListDestroyViewSet(
