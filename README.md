@@ -23,7 +23,7 @@
 
 ### Запуск:
 
-Командой git push проект автоматически проверяется тестами (flake8, pytest), отправляет образ на DockerHub, и разворачивается на удаленном сервере 
+Командой git push проект автоматически проверяется тестами (flake8, pytest), отправляет образ на DockerHub, разворачивается на удаленном сервере, а также отправляет сообщение в телеграм об успешном деплое 
 
 Необходимые переменные окружения (SECRET_KEY, DB_ENGINE, DB_NAME, POSTGRES_USER, POSTGRES_PASSWORD, DB_HOST, DB_PORT), переменные DockerHub (DOCKER_USERNAME, DOCKER_PASSWORD), переменные удаленного сервера (HOST, USER, SSH_KEY, PASSPHRASE), а также переменные для отправки сообщения в телеграм (TELEGRAM_TO, TELEGRAM_TOKEN) хранятся в GitHub в Secrets: 
 
