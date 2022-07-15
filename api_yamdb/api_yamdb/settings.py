@@ -14,7 +14,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", default="123456789")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["51.250.101.66", "localhost", 'pelkovpa.ddns.net']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
